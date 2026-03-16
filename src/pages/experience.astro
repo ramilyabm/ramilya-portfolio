@@ -1,0 +1,189 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const experiences = [
+  {
+    logo: { text: 'AI', bg: 'bg-violet-600' },
+    role: 'Business Development (Contract)',
+    company: 'Algebras AI — Localization Platform - Backed by Global 500',
+    period: 'March 2026 – Present',
+    portfolio: 'GDC 2026',
+    results: [
+      'Generated 130+ qualified leads at GDC 2026 through direct outreach and on-site engagement.',
+      'Conversion tracking in progress.',
+    ],
+  },
+  {
+    logo: { text: 'P&G', bg: 'bg-blue-700' },
+    role: 'Senior Account Executive',
+    company: 'Procter & Gamble — Eastern Europe',
+    period: 'April 2024 – April 2025',
+    portfolio: '$20MM Enterprise Portfolio',
+    results: [
+      '+50% revenue growth in 6 months across 40 enterprise retail partnerships.',
+      'Built sales enablement playbook for 10 reps; improved win rates by +25%.',
+      'Created Power BI and Excel dashboards tracking pipeline health; drove +3ppt market share growth.',
+      '95% account retention rate across full portfolio renewal cycle.',
+    ],
+  },
+  {
+    logo: { text: 'P&G', bg: 'bg-blue-700' },
+    role: 'Enterprise Account Manager',
+    company: 'Procter & Gamble — Eastern Europe',
+    period: 'November 2021 – April 2024',
+    portfolio: '$11MM Strategic Partnership',
+    results: [
+      '+140% YoY revenue growth through consultative selling and joint business planning.',
+      'CEO Award (top 1% of 1,500 employees) for driving +190% e-commerce channel growth.',
+      'Launched 20 nationwide digital campaigns averaging 400–500% ROI.',
+    ],
+  },
+  {
+    logo: { text: 'UIB', bg: 'bg-slate-700' },
+    role: 'Senior Instructor',
+    company: 'University of International Business',
+    period: 'September 2020 – October 2021',
+    portfolio: null,
+    results: [
+      'Designed "Business English & Professional Communication" workshops for 300+ undergraduates.',
+      'Coached students on persuasive writing, negotiation tactics, and executive-style presentations.',
+    ],
+  },
+  {
+    logo: { text: 'AE', bg: 'bg-sky-600' },
+    role: 'President & VP Business Development',
+    company: 'AIESEC — World\'s Largest Youth-Led Nonprofit',
+    period: '2014 – 2016',
+    portfolio: null,
+    results: [
+      'Cold-called 50+ companies, closed 3 corporate sponsorships totaling $4,400 (100% of annual budget).',
+      'Hired, managed, and coached 70+ volunteers on prospecting, discovery, and objection handling.',
+      'Organized events reaching 500+ participants (Youth2Business Forum, Global Village).',
+    ],
+  },
+];
+---
+
+<Layout title="Experience">
+  <section class="bg-brand-950 text-white">
+    <div class="max-w-6xl mx-auto px-6 py-16 md:py-20">
+      <h1 class="font-display text-4xl md:text-5xl mb-4">Professional Experience</h1>
+      <p class="text-slate-300 text-lg max-w-2xl">
+        From top-tier enterprise sales leadership to a deliberate transition into AI-enabled technical sales.
+      </p>
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-6 py-16">
+    <div class="relative">
+      <!-- Timeline line -->
+      <div class="absolute left-4 md:left-6 top-0 bottom-0 w-px bg-brand-200"></div>
+
+      {experiences.map((exp, i) => (
+        <div class="relative pl-12 md:pl-16 pb-14 last:pb-0">
+          <!-- Timeline dot -->
+          <div class="absolute left-2.5 md:left-4.5 top-1.5 w-3 h-3 rounded-full bg-accent-400 ring-4 ring-white"></div>
+
+          <div class="flex items-center gap-3 mb-2">
+            <div class={`shrink-0 w-10 h-10 rounded-lg ${exp.logo.bg} flex items-center justify-center`}>
+              <span class="text-white font-bold text-xs">{exp.logo.text}</span>
+            </div>
+            <p class="text-sm text-slate-500 font-medium">{exp.period}</p>
+          </div>
+          <h2 class="font-display text-2xl text-brand-900 mb-1">{exp.role}</h2>
+          <p class="text-brand-700 font-medium mb-1">{exp.company}</p>
+          {exp.portfolio && (
+            <p class="text-sm text-accent-600 font-medium mb-4">{exp.portfolio}</p>
+          )}
+
+          <ul class="space-y-2 mt-4">
+            {exp.results.map(r => (
+              <li class="flex items-start gap-3 text-slate-600 leading-relaxed">
+                <span class="mt-2 w-1.5 h-1.5 rounded-full bg-brand-300 shrink-0"></span>
+                {r}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </section>
+  <!-- Awards & Recognition -->
+  <section class="bg-slate-50 border-t border-slate-100">
+    <div class="max-w-4xl mx-auto px-6 py-16">
+      <h2 class="font-display text-2xl text-brand-900 mb-8">Awards &amp; Recognition</h2>
+
+      <!-- Featured awards with photos -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
+        <div class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+          <img src="/ceo-award.jpg" alt="P&G CEO Award" class="w-full h-44 object-cover" />
+          <div class="p-4">
+            <p class="font-medium text-brand-900 text-sm">CEO Award</p>
+            <p class="text-xs text-slate-500">Top 1% of 1,500 employees · P&amp;G Eastern Europe</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+          <img src="/pearl-award.jpg" alt="Pearl Award" class="w-full h-44 object-cover" />
+          <div class="p-4">
+            <p class="font-medium text-brand-900 text-sm">Pearl Award</p>
+            <p class="text-xs text-slate-500">P&amp;G Eastern Europe</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+          <img src="/aiesec-award.jpg" alt="AIESEC Leadership" class="w-full h-44 object-cover" />
+          <div class="p-4">
+            <p class="font-medium text-brand-900 text-sm">AIESEC President</p>
+            <p class="text-xs text-slate-500">World's largest youth-led nonprofit</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Awards with double photos -->
+      <div class="grid sm:grid-cols-2 gap-5 mb-8">
+        <div class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+          <div class="grid grid-cols-2 gap-px bg-slate-200">
+            <img src="/success-story-1.jpg" alt="Best Success Story" class="w-full h-36 object-cover" />
+            <img src="/success-story-2.jpg" alt="Best Success Story" class="w-full h-36 object-cover" />
+          </div>
+          <div class="p-4">
+            <p class="font-medium text-brand-900 text-sm">Best Success Story ×3</p>
+            <p class="text-xs text-slate-500">P&amp;G Eastern Europe</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+          <div class="grid grid-cols-2 gap-px bg-slate-200">
+            <img src="/gold-award-1.jpg" alt="Gold Award" class="w-full h-36 object-cover" />
+            <img src="/gold-award-2.jpg" alt="Gold Award" class="w-full h-36 object-cover" />
+          </div>
+          <div class="p-4">
+            <p class="font-medium text-brand-900 text-sm">Gold Award ×2</p>
+            <p class="text-xs text-slate-500">P&amp;G Eastern Europe</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Silver - text only -->
+      <div class="bg-white rounded-xl border border-slate-200 p-4">
+        <div class="grid grid-cols-2 gap-px bg-slate-200">
+            <img src="/silver2.jpg" alt="Silver Award" class="w-full h-36 object-cover" />
+            <img src="/silver1.jpg" alt="Silver Award" class="w-full h-36 object-cover" />
+          </div>
+        <p class="font-medium text-brand-900 text-sm">Silver Award ×2</p>
+        <p class="text-xs text-slate-500">P&amp;G Eastern Europe</p>
+      </div>
+
+      <!-- External Awards -->
+      <div class="bg-white rounded-xl border border-slate-200 p-4">
+        <div class="grid grid-cols-2 gap-px bg-slate-200">
+            <img src="/magnum1.jpg" alt="External Award" class="w-full h-36 object-cover" />
+            <img src="/magnum2.jpg" alt="External Award" class="w-full h-36 object-cover" />
+          </div>
+        <p class="font-medium text-brand-900 text-sm">External Awards from Partners ×2</p>
+        <p class="text-xs text-slate-500">Magnum - Largest Strategic Partner - Marketing and Commercial Departments </p>
+      </div>
+    </div>
+  </section>
+</Layout>

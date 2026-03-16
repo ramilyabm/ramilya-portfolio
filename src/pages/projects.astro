@@ -1,0 +1,82 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const projects = [
+  {
+    name: 'Revenue Intelligence Dashboard',
+    description: 'Full-stack sales analytics dashboard with data modeling, pipeline visualization, and business metrics. Demonstrates data visualization and sales domain expertise.',
+    stack: ['Python', 'Streamlit', 'Data Modeling'],
+    liveUrl: 'https://revenue-intelligence-dashboard-rami.streamlit.app/',
+    status: 'Live',
+  },
+  {
+    name: 'AI Strategy Analyzer',
+    description: 'Interactive app analyzing AI adoption trends, sector maturity across industries, and a sales enablement vault with objection-handling scripts.',
+    stack: ['Python', 'Streamlit'],
+    liveUrl: 'https://ai-strategy-rami.streamlit.app/',
+    status: 'Live',
+  },
+  {
+    name: 'AI Startup ROI Mapping',
+    description: 'Ecosystem analysis mapping leading AI startups to business use cases with quantified ROI frameworks for enterprise buyers.',
+    stack: ['Python', 'Streamlit'],
+    liveUrl: 'https://ai-startups-rami.streamlit.app/', 
+    status: 'Live',
+  },
+  {
+    name: 'This Portfolio Website',
+    description: 'Modern static site built with Astro and Tailwind CSS. Deployed on Vercel. Source code on GitHub.',
+    stack: ['Astro', 'Tailwind CSS', 'Vercel'],
+    liveUrl: '/',
+    status: 'Live',
+  },
+];
+---
+
+<Layout title="Projects">
+  <section class="bg-brand-950 text-white">
+    <div class="max-w-6xl mx-auto px-6 py-16 md:py-20">
+      <h1 class="font-display text-4xl md:text-5xl mb-4">Technical Portfolio</h1>
+      <p class="text-slate-300 text-lg max-w-2xl">
+        Deployed projects that prove I can build, ship, and understand technical products — not just sell them.
+      </p>
+    </div>
+  </section>
+
+  <section class="max-w-6xl mx-auto px-6 py-16">
+    <div class="grid md:grid-cols-2 gap-8">
+      {projects.map(project => (
+        <div class="group border border-slate-200 rounded-xl p-8 hover:border-brand-300 hover:shadow-lg transition-all">
+          <div class="flex items-center justify-between mb-4">
+            <h2 class="font-display text-xl text-brand-900">{project.name}</h2>
+            <span class="text-xs font-semibold text-green-700 bg-green-100 px-2.5 py-1 rounded-full">
+              {project.status}
+            </span>
+          </div>
+
+          <p class="text-slate-600 leading-relaxed mb-6">{project.description}</p>
+
+          <div class="flex flex-wrap gap-2 mb-6">
+            {project.stack.map(tech => (
+              <span class="text-xs font-medium text-brand-700 bg-brand-50 px-2.5 py-1 rounded-md">
+                {tech}
+              </span>
+            ))}
+          </div>
+
+          <div class="flex gap-4">
+            <a
+              href={project.liveUrl}
+              target={project.liveUrl.startsWith('http') ? '_blank' : undefined}
+              rel={project.liveUrl.startsWith('http') ? 'noopener noreferrer' : undefined}
+              class="text-sm font-medium text-brand-600 hover:text-brand-800 transition-colors"
+            >
+              View Live &rarr;
+            </a>
+            <!-- Add GitHub link when repos are public -->
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+</Layout>

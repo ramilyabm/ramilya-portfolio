@@ -1,0 +1,124 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Education">
+  <section class="bg-brand-950 text-white">
+    <div class="max-w-6xl mx-auto px-6 py-16 md:py-20">
+      <h1 class="font-display text-4xl md:text-5xl mb-4">Education &amp; Certifications</h1>
+      <p class="text-slate-300 text-lg max-w-2xl">
+        A strong analytical foundation — economics, literature, computer science, and cloud — built across four countries.
+      </p>
+    </div>
+  </section>
+
+  <!-- Technical certifications — FIRST -->
+  <section class="max-w-4xl mx-auto px-6 pt-14 pb-8">
+    <h2 class="font-display text-2xl text-brand-900 mb-6">Technical Certifications &amp; Training</h2>
+
+    <div class="space-y-5">
+      <div class="flex items-start gap-4 bg-slate-50 rounded-xl p-5 border border-slate-100">
+        <div class="shrink-0 w-12 h-12 rounded-lg bg-red-800 flex items-center justify-center">
+          <span class="text-white font-bold text-xs">CS50</span>
+        </div>
+        <div>
+          <h3 class="font-medium text-brand-900">Harvard CS50x — Introduction to Computer Science</h3>
+          <p class="text-sm text-slate-500 mb-1">Completed 2026</p>
+          <p class="text-slate-600 text-sm">Full course including final project. Covers C, Python, SQL, web development, algorithms, and data structures.</p>
+          <img src="/cert-cs50.jpg" alt="CS50 Certificate" class="mt-2 w-full rounded border border-slate-200" />
+        </div>
+        </div>
+      </div>
+
+      <div class="flex items-start gap-4 bg-slate-50 rounded-xl p-5 border border-slate-100">
+        <div class="shrink-0 w-12 h-12 rounded-lg bg-amber-600 flex items-center justify-center">
+          <span class="text-white font-bold text-xs">AWS</span>
+        </div>
+        <div>
+          <h3 class="font-medium text-brand-900">AWS Cloud Practitioner — Udemy Coursework</h3>
+          <p class="text-sm text-slate-500 mb-1">Completed 2026</p>
+          <p class="text-slate-600 text-sm">Full curriculum covering EC2, S3, IAM, RDS, Lambda, and cloud architecture fundamentals. Coursework completed.</p>
+          <img src="/cert-ccp.jpg" alt="Data Analytics Certificate" class="mt-2 w-full rounded border border-slate-200" />
+        </div>
+      </div>
+
+      <div class="flex items-start gap-4 bg-slate-50 rounded-xl p-5 border border-slate-100">
+        <div class="shrink-0 w-12 h-12 rounded-lg bg-emerald-700 flex items-center justify-center">
+          <span class="text-white font-bold text-xs">DA</span>
+        </div>
+        <div>
+          <h3 class="font-medium text-brand-900">Bootcamp in Big Data Analysis</h3>
+          <p class="text-sm text-slate-500 mb-1">Top Student Certificate</p>
+          <p class="text-slate-600 text-sm">Power BI, SQL, and Excel. Earned top student recognition.</p>
+          <img src="/cert-data.jpg" alt="Data Analytics Certificate" class="mt-2 w-full rounded border border-slate-200" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Degrees — SECOND -->
+  <section class="max-w-4xl mx-auto px-6 py-8">
+    <h2 class="font-display text-2xl text-brand-900 mb-6">Degrees</h2>
+
+    <div class="space-y-5">
+      <div class="flex items-start gap-5 border border-slate-200 rounded-xl p-5 hover:shadow-md transition-shadow">
+        <div class="shrink-0 w-14 h-14 rounded-xl bg-brand-900 flex items-center justify-center">
+          <span class="text-white font-bold text-lg">UT</span>
+        </div>
+        <div class="flex-1 min-w-0">
+          <h3 class="font-display text-xl text-brand-900">Master of Arts in Literature</h3>
+          <p class="text-brand-700 font-medium">University of Tartu, Estonia</p>
+          <p class="text-sm text-slate-500 mb-2">Graduated 2020 · Cum Laude</p>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            #1 in Estonia and the Baltics. Top 1% of the world's most highly cited universities. Founded in 1632. QS #362 · THE #301 (2026).
+          </p>
+        </div>
+        <img src="/tartu-graduation.jpg" alt="University of Tartu" class="hidden sm:block shrink-0 w-28 h-36 object-cover rounded-lg" />
+      </div>
+
+      <div class="flex items-start gap-5 border border-slate-200 rounded-xl p-5 hover:shadow-md transition-shadow">
+        <div class="shrink-0 w-14 h-14 rounded-xl bg-brand-900 flex items-center justify-center">
+          <span class="text-white font-bold text-lg">NU</span>
+        </div>
+        <div class="flex-1 min-w-0">
+          <h3 class="font-display text-xl text-brand-900">Bachelor of Arts in Economics</h3>
+          <p class="text-brand-700 font-medium">Nazarbayev University, Kazakhstan</p>
+          <p class="text-sm text-slate-500 mb-2">Graduated 2017 · Cum Laude</p>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            #1 in Central Asia and the Caucasus. #150 in Asia (THE 2025). Fully merit-based admission. English-medium instruction from day one. THE #401–500 (2026).
+          </p>
+        </div>
+        <img src="/nu-campus.jpg" alt="Nazarbayev University" class="hidden sm:block shrink-0 w-28 h-36 object-cover rounded-lg" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Exchange programs — THIRD -->
+  <section class="max-w-4xl mx-auto px-6 pt-8 pb-16">
+    <h2 class="font-display text-2xl text-brand-900 mb-6">Exchange Programs</h2>
+    <div class="grid sm:grid-cols-2 gap-5">
+      <div class="flex items-start gap-4 bg-slate-50 rounded-xl p-5 border border-slate-100">
+        <div class="shrink-0 w-12 h-12 rounded-lg bg-red-700 flex items-center justify-center">
+          <span class="text-white font-bold text-sm">UW</span>
+        </div>
+        <div>
+          <p class="font-medium text-brand-900">University of Wisconsin-Madison</p>
+          <p class="text-sm text-slate-500">United States</p>
+          <p class="text-xs text-slate-400 mt-1">QS #82 (2026). Top public university in the U.S.</p>
+          <img src="/uw-exchange.jpg" alt="University of Wisconsin-Madison" class="mt-2 w-full aspect-[16/9] object-cover rounded" />
+        </div>
+      </div>
+      <div class="flex items-start gap-4 bg-slate-50 rounded-xl p-5 border border-slate-100">
+        <div class="shrink-0 w-12 h-12 rounded-lg bg-blue-800 flex items-center justify-center">
+          <span class="text-white font-bold text-sm">CAU</span>
+        </div>
+        <div>
+          <p class="font-medium text-brand-900">Christian-Albrecht University of Kiel</p>
+          <p class="text-sm text-slate-500">Germany</p>
+          <p class="text-xs text-slate-400 mt-1">Founded 1665. Nobel Prize legacy in sciences.</p>
+          <img src="/kiel-exchange.jpg" alt="Christian-Albrecht University of Kiel" class="mt-2 w-full aspect-[16/9] object-cover rounded" />
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

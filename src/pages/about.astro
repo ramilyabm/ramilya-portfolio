@@ -1,0 +1,109 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const strengths = [
+  {
+    name: 'Achiever',
+    description: 'I need to produce every day. A constant drive for accomplishment fuels my work ethic.',
+  },
+  {
+    name: 'Consistency',
+    description: 'I value fairness and predictable processes. I build repeatable systems, not one-off wins.',
+  },
+  {
+    name: 'Connectedness',
+    description: 'I see how things link: people, ideas, events. This makes me a natural bridge between business and technology.',
+  },
+  {
+    name: 'Harmony',
+    description: 'I find common ground between stakeholders. Engineering and sales don\'t have to speak different languages.',
+  },
+  {
+    name: 'Developer',
+    description: 'I see potential in people and products. I invest in growth of my own, my team\'s, and my clients\'.',
+  },
+];
+---
+
+<Layout title="About">
+  <section class="bg-brand-950 text-white">
+    <div class="max-w-6xl mx-auto px-6 py-16 md:py-20">
+      <h1 class="font-display text-4xl md:text-5xl mb-4">About Me</h1>
+      <p class="text-slate-300 text-lg max-w-2xl">
+        The person behind the portfolio.
+      </p>
+    </div>
+  </section>
+
+  <!-- Bio -->
+  <section class="max-w-3xl mx-auto px-6 py-16">
+    <h2 class="font-display text-2xl text-brand-900 mb-6">My Story</h2>
+    <div class="space-y-4 text-slate-600 leading-relaxed">
+      <p>
+        I help technology companies turn complex AI and cloud products into revenue. My job is to sit between your engineering team and your buyer's boardroom and make sure both sides walk away confident they're speaking the same language.
+      </p>
+      <p>
+        That skill came from managing a $20 million enterprise portfolio at Procter &amp; Gamble, where I finished in the top 1% of 1,500 employees across Eastern Europe and earned the CEO Award. Before that, I studied economics at Nazarbayev University in Kazakhstan, completed a master's with honors at the University of Tartu in Estonia, and spent semesters at the University of Wisconsin-Madison in the US and Kiel in Germany. Four countries, two degrees with honors, and a habit of performing wherever I land.
+      </p>
+      <p>
+        When I decided to move into tech sales, I enrolled in Harvard's CS50, studied AWS cloud architecture, learned SQL and Power BI, and built three deployed applications from scratch. Then I flew to GDC 2026 and generated 130+ qualified leads for an AI startup in my first week on the floor.
+      </p>
+      <p>
+        I'm now based in San Jose — ten minutes from the companies I want to work with. I have a Green Card, a sales track record that speaks for itself, and the technical foundation to back it up. What I'm looking for is a team that values someone who can demo the product, read the room, and close the deal — all in the same meeting.
+      </p>
+    </div>
+  </section>
+
+  <!-- Clifton Strengths -->
+  <section class="bg-slate-50 border-y border-slate-100">
+    <div class="max-w-5xl mx-auto px-6 py-16">
+      <h2 class="font-display text-2xl text-brand-900 mb-8">Clifton Strengths — Top 5</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
+        {strengths.map((s, i) => (
+          <div class="bg-white rounded-xl p-5 border border-slate-200 hover:border-brand-300 hover:shadow-md transition-all">
+            <span class="text-xs font-semibold text-accent-500 mb-1 block">#{i + 1}</span>
+            <h3 class="font-display text-lg text-brand-900 mb-2">{s.name}</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">{s.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Music -->
+  <section class="max-w-3xl mx-auto px-6 py-16">
+    <h2 class="font-display text-2xl text-brand-900 mb-4">Music &amp; Singing</h2>
+    <p class="text-slate-600 leading-relaxed mb-8">
+      Outside of work, I sing and create music. It's how I recharge, express creativity, and stay connected to something beyond spreadsheets and dashboards.
+    </p>
+
+    <div class="grid sm:grid-cols-3 gap-4">
+      <div class="aspect-video rounded-lg overflow-hidden border border-slate-200">
+        <iframe class="w-full h-full" src="https://www.youtube.com/embed/4kdqVfut3I0" title="Singing video 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="aspect-video rounded-lg overflow-hidden border border-slate-200">
+        <iframe class="w-full h-full" src="https://www.youtube.com/embed/qWlqlxm2Ceo" title="Singing video 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="aspect-video rounded-lg overflow-hidden border border-slate-200">
+        <iframe class="w-full h-full" src="https://www.youtube.com/embed/ZOAiTTsukbc" title="Singing video 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <!-- GDC LinkedIn post -->
+    <a href="https://www.linkedin.com/posts/ramilyabakiyeva_gdc2026-gamingindustry-algebrasai-activity-7438751227313598464-sicU?utm_source=share&utm_medium=member_desktop&rcm=ACoAABB3204BmjSs3PhdcsicPsz8_nz29Yh8qSM" target="_blank" rel="noopener noreferrer"
+       class="block bg-slate-50 rounded-xl border border-slate-200 hover:border-brand-300 hover:shadow-md transition-all p-8 group mb-6">
+      <div class="flex items-center gap-4 mb-3">
+        <div class="w-10 h-10 rounded-lg bg-brand-100 flex items-center justify-center shrink-0">
+          <svg class="w-5 h-5 text-brand-600" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+        </div>
+        <p class="font-medium text-brand-900 group-hover:text-brand-700 transition-colors">GDC 2026 — Watch on LinkedIn</p>
+      </div>
+      <p class="text-slate-600 text-sm leading-relaxed">
+        Game Developers Conference 2026 in 60 seconds.
+      </p>
+      <p class="text-sm text-brand-600 mt-3 font-medium">View Post &rarr;</p>
+    </a>
+  </section>
+</Layout>

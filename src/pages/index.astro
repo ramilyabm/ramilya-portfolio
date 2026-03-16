@@ -1,0 +1,78 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Home">
+  <!-- Hero -->
+  <section class="bg-brand-950 text-white">
+    <div class="max-w-6xl mx-auto px-6 py-24 md:py-32">
+      <div class="flex flex-col-reverse md:flex-row md:items-center md:gap-16">
+        <div class="max-w-3xl">
+          <p class="text-accent-400 font-medium tracking-wide text-sm mb-4 uppercase animate-fade-up">
+            Technical Sales &bull; Enterprise Account Manager &bull; Technical CSM
+          </p>
+          <h1 class="font-display text-4xl md:text-5xl lg:text-6xl leading-tight mb-6 animate-fade-up delay-1">
+            I translate complex AI&nbsp;&amp; cloud solutions into business value.
+          </h1>
+          <p class="text-slate-300 text-lg md:text-xl leading-relaxed mb-10 max-w-2xl animate-fade-up delay-2">
+            Top 1% enterprise sales performer at P&amp;G, now building technical fluency in AI, cloud, and data analytics. Based in San Jose, CA.
+          </p>
+          <div class="flex flex-wrap gap-4 animate-fade-up delay-3">
+            <a href="/projects" class="inline-block bg-accent-400 hover:bg-accent-500 text-brand-950 font-semibold px-6 py-3 rounded-lg transition-colors">
+              View My Portfolio
+            </a>
+            <a href="/resume.pdf" target="_blank" class="inline-block border border-slate-500 hover:border-white text-white font-medium px-6 py-3 rounded-lg transition-colors">
+              Download Resume
+            </a>
+            <a href="/contact" class="inline-block border border-slate-500 hover:border-white text-white font-medium px-6 py-3 rounded-lg transition-colors">
+              Get in Touch
+            </a>
+          </div>
+        </div>
+        <img src="/headshot.jpg" alt="Ramilya Bakiyeva" class="w-52 h-52 md:w-72 md:h-72 rounded-full object-cover border-4 border-brand-800 shadow-xl mb-8 md:mb-0 shrink-0 animate-scale-in delay-2" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Highlight cards -->
+  <section class="max-w-6xl mx-auto px-6 py-20">
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <div class="bg-slate-50 rounded-xl p-8 border border-slate-100 hover:shadow-lg hover:border-brand-200 transition-all animate-fade-up delay-1">
+        <div class="text-accent-500 text-3xl font-display mb-3">Top 1%</div>
+        <h3 class="font-display text-xl text-brand-900 mb-2">Sales Track Record</h3>
+        <p class="text-slate-600 leading-relaxed">
+          CEO Award winner at P&amp;G Eastern Europe. Delivered +140% YoY revenue growth and +190% e-commerce growth managing $20MM+ enterprise portfolios.
+        </p>
+      </div>
+
+      <div class="bg-slate-50 rounded-xl p-8 border border-slate-100 hover:shadow-lg hover:border-brand-200 transition-all animate-fade-up delay-2">
+        <div class="text-accent-500 text-3xl font-display mb-3">3 Apps</div>
+        <h3 class="font-display text-xl text-brand-900 mb-2">Deployed Technical Projects</h3>
+        <p class="text-slate-600 leading-relaxed">
+          Built and shipped a Revenue Intelligence Dashboard, AI Strategy Analyzer, and AI Startup ROI Mapping tool. Python, Streamlit, SQL, Data Modeling.
+        </p>
+      </div>
+
+      <div class="bg-slate-50 rounded-xl p-8 border border-slate-100 hover:shadow-lg hover:border-brand-200 transition-all animate-fade-up delay-3">
+        <div class="text-accent-500 text-3xl font-display mb-3">CS + Cloud</div>
+        <h3 class="font-display text-xl text-brand-900 mb-2">Technical Foundation</h3>
+        <p class="text-slate-600 leading-relaxed">
+          Harvard CS50x (2026). AWS Cloud Practitioner coursework. Certified in SQL, Power BI, and Excel. Building fluency in the full cloud ecosystem.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Value proposition -->
+  <section class="bg-brand-50/50 border-y border-brand-100">
+    <div class="max-w-3xl mx-auto px-6 py-20 text-center">
+      <h2 class="font-display text-3xl text-brand-900 mb-6">The Rare Combination</h2>
+      <p class="text-slate-600 text-lg leading-relaxed">
+        Not an engineer learning to sell. Not a salesperson faking technical knowledge.
+        A sales professional who can authentically engage with both engineering teams and C-suite executives.
+      </p>
+    </div>
+  </section>
+</Layout>
